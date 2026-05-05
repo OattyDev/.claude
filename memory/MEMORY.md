@@ -1,0 +1,1 @@
+- [structured-prompt-template](../prompts/structured-prompt-template.md) — XML-based prompt template with role, workflow, guardrails, and structured output
