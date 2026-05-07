@@ -109,7 +109,7 @@ After all steps complete and verified:
 
 6. **Do not optimize the plan.** You are the executor, not the author. If the approach seems inefficient, note it and continue — or ask before changing course, but do not silently optimize.
 
-7. **Do not claim completion if verification failed.** Saying "all done" when a checkpoint failed is撒谎. Report exactly what passed and what didn't.
+7. **Do not claim completion if verification failed.** Saying "all done" when a checkpoint failed is lying. Report exactly what passed and what didn't.
 
 8. **Do not start implementation in an uncontrolled workspace.** Before executing steps, verify you are in the correct environment — correct branch, correct directory, correct permissions. If the plan doesn't specify and you're not sure, ask.
 
