@@ -11,7 +11,11 @@ DEST="$HOME/.claude/skills"
 # writing the per-skill symlinks back into the repo's own skills/ tree. Detect
 # and bail out instead of polluting the working copy.
 if [ -L "$DEST" ]; then
-  resolved="$(readlink -f "$DEST")"
+  if resolved="$(realpath "$DEST" 2>/dev/null)"; then
+    :
+  else
+    resolved="$(cd -P -- "$(dirname -- "$DEST")" && pwd)/$(basename -- "$DEST")"
+  fi
   case "$resolved" in
     "$REPO"|"$REPO"/*)
       echo "error: $DEST is a symlink into this repo ($resolved)." >&2
